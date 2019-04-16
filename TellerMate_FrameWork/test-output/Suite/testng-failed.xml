@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test name="TC_Login(failed)">
+    <classes>
+      <class name="pk.tellermate.testcases.TC_Login">
+        <methods>
+          <include name="verifyLogin"/>
+          <include name="startApp"/>
+          <include name="tearDown"/>
+          <include name="setupSuite"/>
+          <include name="tearDownMethod"/>
+        </methods>
+      </class> <!-- pk.tellermate.testcases.TC_Login -->
+    </classes>
+  </test> <!-- TC_Login(failed) -->
+</suite> <!-- Failed suite [Suite] -->
