@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
       <class name="pk.tellermate.testcases.TC_Login">
         <methods>
@@ -9,6 +9,7 @@
           <include name="startApp"/>
           <include name="tearDown"/>
           <include name="setupSuite"/>
+          <include name="tearDownMethod"/>
         </methods>
       </class> <!-- pk.tellermate.testcases.TC_Login -->
     </classes>
