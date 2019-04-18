@@ -23,7 +23,6 @@ public class HomePage
 	{
 		System.out.println(welcomeText.getText());
 		Assert.assertTrue(welcomeText.getText().contains("WELCOME"));
-
 	}
 	
 //	Constructor
