@@ -15,15 +15,15 @@ import org.testng.Assert;
 public class HomePage 
 {
 	WebDriver driver;
-	String expectedNote = "";
-	
 	
 	@FindBy (className = "wc-title") 
 	WebElement welcomeText;
 	
 	public void verifyWelcome()
 	{
-		Assert.assertTrue(welcomeText.getText().contains("Welcome"));	
+		System.out.println(welcomeText.getText());
+		Assert.assertTrue(welcomeText.getText().contains("WELCOME"));
+
 	}
 	
 //	Constructor
