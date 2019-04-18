@@ -42,8 +42,14 @@
 				<version>3.0.0-M3</version>
 				<configuration>
 					<suiteXmlFiles>
-						<suiteXmlFile>XMLFiles/testng.xml</suiteXmlFile>
+						<suiteXmlFile>XMLFiles/${paramTestSuite}</suiteXmlFile>
 					</suiteXmlFiles>
+					
+					<systemPropertyVariables>
+					<browser>${paramBrowser}</browser>
+					<url>${paramURL}</url>>
+					</systemPropertyVariables>
+					
 				</configuration>
 			</plugin>
 		</plugins>

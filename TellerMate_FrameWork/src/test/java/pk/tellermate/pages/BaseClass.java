@@ -7,6 +7,7 @@ import pk.tellermate.utility.Helper;
 
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Parameters;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -41,8 +42,24 @@ public class BaseClass {
 		Reporter.log("Initilized and tests can be started.", true);
 	}
 
+
+	// Code to run from command line with maven
+	/* 
+	@Parameters({"paramBrowser","paramURL"})
+	@BeforeClass
+	public void startApp(String browser, String url) 
+
+	{
+		Reporter.log("Initilizing Browser and getting application ready.", true);
+		driver = BrowserFactory.startApplication(driver, browser, url);
+		Reporter.log("Browser and application is up and running.", true);
+	}
+	 */
+	
+	// Code to run through log file
 	@BeforeClass
 	public void startApp() 
+	
 	{
 		Reporter.log("Initilizing Browser and getting application ready.", true);
 		driver = BrowserFactory.startApplication(driver, config.getBrowser(), config.getURL());
