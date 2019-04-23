@@ -3,15 +3,17 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="pk.tellermate.testcases.TC_Login">
+      <class name="pk.tellermate.testcases.TC_payBill">
         <methods>
-          <include name="verifyLogin"/>
+          <include name="openPayBill"/>
+          <include name="verifySearch"/>
           <include name="startApp"/>
           <include name="tearDown"/>
           <include name="setupSuite"/>
           <include name="tearDownMethod"/>
+          <include name="verifyLogin"/>
         </methods>
-      </class> <!-- pk.tellermate.testcases.TC_Login -->
+      </class> <!-- pk.tellermate.testcases.TC_payBill -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
