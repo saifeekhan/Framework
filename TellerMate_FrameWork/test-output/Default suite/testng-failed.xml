@@ -5,13 +5,11 @@
     <classes>
       <class name="pk.tellermate.testcases.TC_payBill">
         <methods>
-          <include name="openPayBill"/>
           <include name="verifySearch"/>
           <include name="startApp"/>
           <include name="tearDown"/>
           <include name="setupSuite"/>
           <include name="tearDownMethod"/>
-          <include name="verifyLogin"/>
         </methods>
       </class> <!-- pk.tellermate.testcases.TC_payBill -->
     </classes>

@@ -6,6 +6,9 @@ package pk.tellermate.pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
  * @author saif.khan
@@ -13,6 +16,7 @@ import org.openqa.selenium.support.FindBy;
  */
 public class LoginPage {
 	WebDriver driver;
+	WebDriverWait wait;
 	
 	@FindBy(name= "email") 
 	WebElement userName;
@@ -25,6 +29,8 @@ public class LoginPage {
 	
 	public void login(String uid, String pwd)
 	{
+		wait = new WebDriverWait(driver,20);
+		wait.until(ExpectedConditions.visibilityOf(userName));
 		userName.clear();
 		userName.sendKeys(uid);
 		passWd.clear();
@@ -33,10 +39,9 @@ public class LoginPage {
 	}
 	
 	
-	
+//	Constructor
 	public LoginPage(WebDriver driver)
 	{
 		this.driver = driver;
 	}
-
 }

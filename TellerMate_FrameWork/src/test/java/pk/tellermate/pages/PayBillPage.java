@@ -37,16 +37,19 @@ public class PayBillPage {
 	@FindBy(how = How.LINK_TEXT, using = "Repetitive Bills")
 	private WebElement repetitiveTab;
 	
-	private String stStatusXPath= "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[4]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/table[1]/tbody[1]/tr[";
-	private String endStatusXPath="]/td[6]";
+	@FindBy (how = How.XPATH, using = "//button[contains(text(),'Pay Bill')]") 
+	private WebElement btnPayBill;
+	
+	@FindBy (how = How.XPATH, using ="//span[@class='msg-box success']") 
+	private WebElement msgBox;
 
 	////////////////////////////////////////////
-	
+
 	// Constructor
 	public PayBillPage(WebDriver driver) {
 		this.driver = driver;
 	}
-	
+
 	// Method to assert the Pay Bill page
 	public void verifyPage() {
 		Assert.assertTrue(pageTitle.getText().contains("Pay Bill"));
@@ -80,34 +83,43 @@ public class PayBillPage {
 	// Method to find a bill from repetitive bills
 	public void findInRepetitive() {
 		Assert.assertTrue(repetitiveTab.isEnabled());
-		clickUnPaid();
+		
 		try {
-			Thread.sleep(3000);
+			Thread.sleep(300);
+			Assert.assertTrue(clickUnPaid());
+			clickUnPaid();
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
 	}
 
-	//
-	private void clickUnPaid()
+	// Search and click on an UNPAID bill from the dynamic table.
+	private boolean clickUnPaid()
 	{
 		int i=1;
-		
+		boolean flag = false; // Is Unpaid record found or not
+		String stStatusXPath= "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[4]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/table[1]/tbody[1]/tr[";
+		String endStatusXPath="]/td[6]";
+		WebElement element;
+
 		while(isElementPresent(stStatusXPath+i+endStatusXPath))
 		{
-			WebElement element = driver.findElement(By.xpath(stStatusXPath+i+endStatusXPath));
+			element = driver.findElement(By.xpath(stStatusXPath+i+endStatusXPath));
 			if (element.getText().contains("UNPAID"))
 			{
 				System.out.println("["+i+"] "+element.getText());
 				element.click();
+				flag=true;
 				break;
 			}
 			else
 			{
 				System.out.println("else "+i+": "+element.getText());
+				flag=false;
 				i++;
 			}
 		}
+		return flag;
 	}
 	// Find an element in Status column of the grid
 	private boolean isElementPresent(String xp) 
@@ -118,6 +130,15 @@ public class PayBillPage {
 		else
 			return true;
 	}
-
 	
+// To Click on PayBill button
+	public void clickPayBill()
+	{
+		if (btnPayBill.isEnabled())
+			btnPayBill.click();
+		else
+			System.out.println ("Button is NOT enabled.");
+	}
+	
+
 }

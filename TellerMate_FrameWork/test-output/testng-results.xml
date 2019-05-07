@@ -32,12 +32,12 @@
       <![CDATA[Test is completed >>> report is genrated.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="22432" started-at="2019-04-23T13:22:50Z" finished-at="2019-04-23T13:23:12Z">
+  <suite name="Suite" duration-ms="19510" started-at="2019-04-24T13:26:44Z" finished-at="2019-04-24T13:27:03Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="22432" started-at="2019-04-23T13:22:50Z" finished-at="2019-04-23T13:23:12Z">
+    <test name="Test_PayBill" duration-ms="19510" started-at="2019-04-24T13:26:44Z" finished-at="2019-04-24T13:27:03Z">
       <class name="pk.tellermate.testcases.TC_payBill">
-        <test-method status="PASS" signature="setupSuite()[pri:0, instance:pk.tellermate.testcases.TC_payBill@39c0f4a]" name="setupSuite" is-config="true" duration-ms="994" started-at="2019-04-23T13:22:49Z" finished-at="2019-04-23T13:22:50Z">
+        <test-method status="PASS" signature="setupSuite()[pri:0, instance:pk.tellermate.testcases.TC_payBill@39c0f4a]" name="setupSuite" is-config="true" duration-ms="3904" started-at="2019-04-24T13:26:40Z" finished-at="2019-04-24T13:26:44Z">
           <reporter-output>
             <line>
               <![CDATA[Initilizing and test is getting ready.]]>
@@ -47,7 +47,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- setupSuite -->
-        <test-method status="PASS" signature="startApp()[pri:0, instance:pk.tellermate.testcases.TC_payBill@39c0f4a]" name="startApp" is-config="true" duration-ms="6840" started-at="2019-04-23T13:22:50Z" finished-at="2019-04-23T13:22:57Z">
+        <test-method status="PASS" signature="startApp()[pri:0, instance:pk.tellermate.testcases.TC_payBill@39c0f4a]" name="startApp" is-config="true" duration-ms="10180" started-at="2019-04-24T13:26:44Z" finished-at="2019-04-24T13:26:54Z">
           <reporter-output>
             <line>
               <![CDATA[Initilizing Browser and getting application ready.]]>
@@ -57,11 +57,11 @@
             </line>
           </reporter-output>
         </test-method> <!-- startApp -->
-        <test-method status="PASS" signature="verifyLogin()[pri:0, instance:pk.tellermate.testcases.TC_payBill@39c0f4a]" name="verifyLogin" duration-ms="1040" started-at="2019-04-23T13:22:57Z" finished-at="2019-04-23T13:22:58Z">
+        <test-method status="PASS" signature="verifyLogin()[pri:0, instance:pk.tellermate.testcases.TC_payBill@39c0f4a]" name="verifyLogin" duration-ms="1554" started-at="2019-04-24T13:26:54Z" finished-at="2019-04-24T13:26:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLogin -->
-        <test-method status="PASS" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:pk.tellermate.testcases.TC_payBill@39c0f4a]" name="tearDownMethod" is-config="true" duration-ms="825" started-at="2019-04-23T13:22:58Z" finished-at="2019-04-23T13:22:58Z">
+        <test-method status="PASS" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:pk.tellermate.testcases.TC_payBill@39c0f4a]" name="tearDownMethod" is-config="true" duration-ms="1111" started-at="2019-04-24T13:26:55Z" finished-at="2019-04-24T13:26:57Z">
           <params>
             <param index="0">
               <value>
@@ -78,11 +78,11 @@
             </line>
           </reporter-output>
         </test-method> <!-- tearDownMethod -->
-        <test-method status="PASS" signature="openPayBill()[pri:5, instance:pk.tellermate.testcases.TC_payBill@39c0f4a]" name="openPayBill" duration-ms="214" started-at="2019-04-23T13:22:58Z" finished-at="2019-04-23T13:22:59Z">
+        <test-method status="PASS" signature="openPayBill()[pri:5, instance:pk.tellermate.testcases.TC_payBill@39c0f4a]" name="openPayBill" duration-ms="282" started-at="2019-04-24T13:26:57Z" finished-at="2019-04-24T13:26:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openPayBill -->
-        <test-method status="PASS" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:pk.tellermate.testcases.TC_payBill@39c0f4a]" name="tearDownMethod" is-config="true" duration-ms="632" started-at="2019-04-23T13:22:59Z" finished-at="2019-04-23T13:22:59Z">
+        <test-method status="PASS" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:pk.tellermate.testcases.TC_payBill@39c0f4a]" name="tearDownMethod" is-config="true" duration-ms="676" started-at="2019-04-24T13:26:57Z" finished-at="2019-04-24T13:26:58Z">
           <params>
             <param index="0">
               <value>
@@ -99,11 +99,11 @@
             </line>
           </reporter-output>
         </test-method> <!-- tearDownMethod -->
-        <test-method status="PASS" signature="verifySearch()[pri:10, instance:pk.tellermate.testcases.TC_payBill@39c0f4a]" name="verifySearch" duration-ms="8974" started-at="2019-04-23T13:22:59Z" finished-at="2019-04-23T13:23:08Z">
+        <test-method status="PASS" signature="verifySearch()[pri:10, instance:pk.tellermate.testcases.TC_payBill@39c0f4a]" name="verifySearch" duration-ms="1641" started-at="2019-04-24T13:26:58Z" finished-at="2019-04-24T13:26:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifySearch -->
-        <test-method status="PASS" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:pk.tellermate.testcases.TC_payBill@39c0f4a]" name="tearDownMethod" is-config="true" duration-ms="448" started-at="2019-04-23T13:23:08Z" finished-at="2019-04-23T13:23:09Z">
+        <test-method status="PASS" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:pk.tellermate.testcases.TC_payBill@39c0f4a]" name="tearDownMethod" is-config="true" duration-ms="623" started-at="2019-04-24T13:26:59Z" finished-at="2019-04-24T13:27:00Z">
           <params>
             <param index="0">
               <value>
@@ -120,11 +120,11 @@
             </line>
           </reporter-output>
         </test-method> <!-- tearDownMethod -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:pk.tellermate.testcases.TC_payBill@39c0f4a]" name="tearDown" is-config="true" duration-ms="3418" started-at="2019-04-23T13:23:09Z" finished-at="2019-04-23T13:23:12Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:pk.tellermate.testcases.TC_payBill@39c0f4a]" name="tearDown" is-config="true" duration-ms="3393" started-at="2019-04-24T13:27:00Z" finished-at="2019-04-24T13:27:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- pk.tellermate.testcases.TC_payBill -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test_PayBill -->
+  </suite> <!-- Suite -->
 </testng-results>

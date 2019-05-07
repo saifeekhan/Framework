@@ -36,6 +36,7 @@ public class ExcelDataProvider
 		
 		return wb.getSheet(sheet).getRow(row).getCell(col).getStringCellValue();
 	}
+	
 	// To read String Data from SheetNumber
 	public String getStringData(int sheetIndex, int row, int col){
 		return wb.getSheetAt(sheetIndex).getRow(row).getCell(col).getStringCellValue();

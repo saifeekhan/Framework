@@ -1,6 +1,7 @@
 package pk.tellermate.testcases;
 
 import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import pk.tellermate.pages.BaseClass;
@@ -23,7 +24,7 @@ public class TC_payBill extends BaseClass {
 
 		logger = report.createTest("Login to TellerMate with Teller");
 		loginPg.login(excel.getStringData(0, 0, 0), excel.getStringData(0, 0, 1));
-		Thread.sleep(200);
+		Thread.sleep(500);
 		homePg.verifyWelcome();
 		logger.pass("Login successful");
 	}
@@ -42,13 +43,14 @@ public class TC_payBill extends BaseClass {
 	
 	// To search a bill
 	@Test (priority=10)
-	public void verifySearch() throws InterruptedException
+	@Parameters("refNo")	// exact name defined in *.pom file
+	public void verifySearch(String referenceNo) throws InterruptedException
 	{
 		logger = report.createTest("Searching Bill...");
 		PayBillPage payBillPg = PageFactory.initElements(driver, PayBillPage.class);
-		payBillPg.searchBill(excel.getStringData(1, 1, 0), excel.getStringData("Bills", 1, 1));
+		//payBillPg.searchBill(excel.getStringData(1, 1, 0), excel.getStringData("Bills", 1, 1));
+		payBillPg.searchBill("SNGPL", referenceNo);
 		payBillPg.findInRepetitive();
-		Thread.sleep(5000);
 		logger.pass("Bill searched.");
 	}
 }
